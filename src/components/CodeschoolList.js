@@ -1,5 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
+import CodeschoolForm from './CodeschoolForm';
+
 require('../stylesheets/CodeschoolList.scss');
 
 class CodeschoolList extends React.Component {
@@ -64,13 +66,13 @@ class CodeschoolList extends React.Component {
           <div key={codeschool.id}>
             <p><a href={codeschool.url}><img src={logolink} /></a></p>
             <h1>{codeschool.name}</h1><br />
-            <p><div className="star"><span style={starStyle} className="rating"></span></div></p>
+            <div className="star"><span style={starStyle} className="rating"></span></div>
             <p>{codeschool.description}</p>
             <p><a href={codeschool.url}>{codeschool.url}</a></p>
           </div>
         );
       })}
-      
+      <CodeschoolForm onChange={this.getData.bind(this)}/>
     </div>);
   }
 }
