@@ -1,5 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import CodeschoolList from './components/CodeschoolList';
+import Codeschool from './components/Codeschool';
+
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={CodeschoolList} />
+      <Route path="/codeschool/:codeschoolId" component={Codeschool}/>
+    </Route>
+  </Router>
+
+), document.getElementById('root'));

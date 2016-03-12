@@ -1,12 +1,19 @@
-class Codeschool extends React.Component{
+import React from 'react';
 import $ from 'jquery';
+require('../stylesheets/Codeschool.scss');
+
+
 // import ReviewForm from './ReviewForm';
 // import ReviewListfrom './ReviewList';
+
+class Codeschool extends React.Component{
+
+
 
     constructor(){
       super();
 
-      this.state ={
+      this.state = {
         databucket: []
       }
     }
@@ -15,8 +22,8 @@ import $ from 'jquery';
 
 
       let compo = this;
-      var codeschoolId = this.props.params.codeschoolId;
-      let APIurl = `https://checktaskmanager.herokuapp.com/codeschools/${codeschoolId}`;
+      let codeschoolId = this.props.params.codeschoolId;
+      let APIurl = `https://codeschoolreviews.herokuapp.com/codeschools/${codeschoolId}`;
 
       //http://api.jquery.com/jQuery.ajax/
       $.ajax({
@@ -28,11 +35,12 @@ import $ from 'jquery';
       })
       .success((response) => {
       console.log(response);
+
       })
       .done((response) => {
-        compo.setState({
-          databucket: response.codeschool
-        });
+          compo.setState({
+            databucket: response.codeschool
+          });
       })
       .fail(function(data, jqXHR, textStatus){
 
@@ -51,12 +59,20 @@ import $ from 'jquery';
     }
 
     render(){
-      return(
-        <div className="well">
-          <h1>Codeschool: {this.state.codeschool.name}</h1>
-          <p className="lead">{this.state.codeschool.description}</p>
-          {/*<ReviewList codeschoolId={this.props.params.codeschoolId} />*/}
-        </div>
+
+        let logoURL = `https://codeschoolreviews.herokuapp.com${this.state.databucket.logo.url}`;
+        let starStyle = {
+    width: `${this.state.databucket.average_rating * 20.0}%`
+  };
+      return(<div>
+          <img src={logoURL}/>
+          <h1>{this.state.databucket.name}</h1>
+          <div className="star"><span style={starStyle} className="rating"></span></div>
+          <p>{this.state.databucket.description}</p>
+          <a href={this.state.databucket.url}>{this.state.databucket.url}</a>
+
+
+          </div>
       );
     };
 }
