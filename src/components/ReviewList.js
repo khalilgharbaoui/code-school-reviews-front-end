@@ -52,7 +52,7 @@ class ReviewList extends React.Component {
   }
 
   render() {
-    return (<div className='row'>
+    return (<div className='row gutter-10'>
       <h1>Code School Reviews</h1>
 
       {this.state.databucket.map(function(review){
@@ -60,14 +60,16 @@ class ReviewList extends React.Component {
             width: `${review.rating * 20.0}%`
           };
         return(
-          <div className='bubble' key={review.id} id={review.id}>
-            <h1>{review.name}</h1>
+          <div className='spacer col-xs-12 col-sm-6 col-md-4' key={review.id} id={review.id}>
+            <div className='bubble'>
+            <h2>{review.name}</h2>
             <div className="stared"><span style={starStyle} className="rated"></span></div>
             <p>{review.description}</p>
+            </div>
           </div>
         );
       })}
-      <ReviewForm codeschoolId={this.props.codeschoolId} onChange={this.getReviews.bind(this)}/>
+      <div className='col-xs-12 col-sm-12 col-md-12'><div className='col-xs-12 col-sm-2 col-md-3'></div><div className='col-xs-12 col-sm-8 col-md-6'><ReviewForm codeschoolId={this.props.codeschoolId} onChange={this.getReviews.bind(this)}/></div><div className='col-xs-12 col-sm-2 col-md-3'></div></div>
     </div>);
   }
 }

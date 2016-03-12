@@ -76,42 +76,41 @@ class CodeschoolForm extends React.Component {
   render(){
     return(
       <form onSubmit={this.sendCodeschool.bind(this)} >
+          <div className="form-group">
         <input
-          type='text'
+          type='text' className='form-control'
           ref='codeschoolname'
           placeholder='Code School Name' />
         <br />
-
-        <textarea
+        </div>
+        <textarea className='form-control'
           rows='4'
           cols='35'
           type='text'
           ref='codeschooldescription'
           placeholder='Code School description' />
         <br />
-
-
-        <input
+        <input className='form-control'
           type='url'
           ref='codeschoolurl'
-          placeholder='Code School URL' />
+          placeholder='here://code.school.example.url' />
         <br />
-
+        <div class="form-group">
+        <label for="file">Upload a Code School Image or Logo Here ( max 5mb )</label>
           <input
-            className='btn'
+            id='file'
+            className='btn btn-primary'
             type='file'
             ref='file'
             onChange={this.uploadFile.bind(this)}
             defaultValue={this.state.file} /><br />
           <img disabled={!this.state.file} src={this.state.file} width='140' />
+          </div>
             <br />
-        <button type='submit' className='btn btn-info'>
+        <button type='submit' className='btn btn-default'>
           Add Code School
         </button>
       </form>
-
-
-
     );
   }
 }

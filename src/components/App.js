@@ -14,20 +14,17 @@ class App extends React.Component {
         return (
             <div>
                 <Navbar />
-            <div className='container'>
-                <EasyTransition
-                    path={location.pathname}
-                    initialStyle={{opacity: 0, transform: 'translate(99%, 1%)'}}
-                    transition='opacity 1300ms ease-in-out, transform 1000ms ease-in-out'
-                    finalStyle={{opacity: 1, transform: 'translate(0%, 0%)'}}>
-                    {this.props.children}
-                </EasyTransition>
-
+                    <div className='container'>
+                        <EasyTransition
+                            path={location.pathname}
+                                initialStyle={{opacity: 0, transform: 'translate(50%, 100%) skewX(0deg)skewY(0deg)'}}
+                                transition='opacity 280ms linear, transform 420ms ease-in'
+                                finalStyle={{opacity: 1, transform: 'translate(0%, 0%) skewX(0deg)skewY(-180deg)'}}>
+                        {this.props.children}
+                        </EasyTransition>
+                    </div>
+                <Footer />
             </div>
-            <Footer />
-            </div>
-
-
         );
     }
 }

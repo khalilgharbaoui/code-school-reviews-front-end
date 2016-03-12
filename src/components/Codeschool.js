@@ -64,14 +64,14 @@ class Codeschool extends React.Component{
         let starStyle = {
     width: `${this.state.databucket.average_rating * 20.0}%`
   };
-      return(<div>
+      return(<div><div className='jumbotron'>
           <img src={logoURL}/>
           <h1>{this.state.databucket.codeschool.name}</h1>
             <div className="stared"><span style={starStyle} className="rated"></span></div>
           <p>{this.state.databucket.codeschool.description}</p>
           <a href={this.state.databucket.codeschool.url}>{this.state.databucket.url}</a><br />
-          <ReviewList codeschoolId={this.props.params.codeschoolId} />
-          </div>
+        </div>
+        <ReviewList codeschoolId={this.props.params.codeschoolId} /></div>
       );
     };
 }
