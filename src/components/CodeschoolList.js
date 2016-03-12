@@ -18,12 +18,12 @@ class CodeschoolList extends React.Component {
 
 
     let compo = this;
-    let apiurl = 'https://codeschoolreviews.herokuapp.com';
+    let APIurl = 'https://codeschoolreviews.herokuapp.com';
 
     //http://api.jquery.com/jQuery.ajax/
 
     $.ajax({
-      url: apiurl,
+      url: APIurl,
       dataType: 'json',
       contentType: 'application/json',
       method: 'GET'

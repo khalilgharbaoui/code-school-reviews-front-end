@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import Dropzone from './Dropzone';
+require('../stylesheets/CodeschoolForm.scss');
 
 
 class CodeschoolForm extends React.Component {
@@ -14,13 +14,8 @@ class CodeschoolForm extends React.Component {
     }
   }
 
-
-
-
   // when a file is passed to the input field, retrieve the contents as a
   // base64-encoded data URI and save it to the component's state
-
-
 
   uploadFile(e){
     let compo = this;
@@ -33,6 +28,14 @@ class CodeschoolForm extends React.Component {
     }.bind(this);
     reader.readAsDataURL(file);
   }
+
+  // removeFile(event){
+  //   event.preventDefault();
+  //   let component = this;
+  //
+  // }
+
+
 
   sendCodeschool(event){
     event.preventDefault();
@@ -80,41 +83,37 @@ class CodeschoolForm extends React.Component {
           placeholder='Code School Name' />
         <br />
 
-        <input
-          type="file"
-          name="file"
-          ref="file"
-          onChange={this.uploadFile.bind(this)}
-          defaultValue={this.state.file} />
-        <br />
-
-          <img src={this.state.file} height="100" />
-
-
         <textarea
-          rows="4"
-          cols="40"
+          rows='4'
+          cols='35'
           type='text'
           ref='codeschooldescription'
           placeholder='Code School description' />
         <br />
 
-
+        
         <input
           type='url'
           ref='codeschoolurl'
           placeholder='Code School URL' />
         <br />
-        <button type="submit" className="btn btn-info">
+
+          <input
+            className='btn'
+            type='file'
+            ref='file'
+            onChange={this.uploadFile.bind(this)}
+            defaultValue={this.state.file} /><br />
+          <img disabled={!this.state.file} src={this.state.file} width='140' />
+            <br />
+        <button type='submit' className='btn btn-info'>
           Add Code School
         </button>
       </form>
 
 
+
     );
-    console.log("State Outside: " + this.state.logo);
   }
 }
-
-
 export default CodeschoolForm;
