@@ -18,7 +18,7 @@ class CodeschoolList extends React.Component {
 
 
     let compo = this;
-    let apiurl = 'https://codeschoolreviews.herokuapp.com/';
+    let apiurl = 'https://codeschoolreviews.herokuapp.com';
 
     //http://api.jquery.com/jQuery.ajax/
 
@@ -30,7 +30,7 @@ class CodeschoolList extends React.Component {
 
     })
     .success((response) => {
-      console.log(response);
+    //  console.log(response);
     })
     .done((response) => {
       compo.setState({

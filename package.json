@@ -59,6 +59,7 @@
   "dependencies": {
     "jquery": "^2.2.1",
     "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react-dom": "^0.14.3",
+    "react-dropzone": "^3.3.2"
   }
 }
