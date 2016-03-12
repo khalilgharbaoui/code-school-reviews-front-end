@@ -1,6 +1,8 @@
 import React from 'react';
 import EasyTransition from 'react-easy-transition'
-import '../stylesheets/_bootstrap.scss';
+import Footer from './Footer';
+import Navbar from './Navbar';
+require('../stylesheets/Components.scss');
 
 class App extends React.Component {
 
@@ -9,16 +11,23 @@ class App extends React.Component {
 
     }
     render() {
-        return (<EasyTransition
-    path={location.pathname}
-    initialStyle={{opacity: 0, transform: 'translate(-2%, -99%)'}}
-    transition='opacity 1200ms ease-in-out, transform 1200ms ease-in-out'
-    finalStyle={{opacity: 1, transform: 'translate(0, 0)'}}
->
+        return (
+            <div>
+                <Navbar />
             <div className='container'>
-                {this.props.children}
+                <EasyTransition
+                    path={location.pathname}
+                    initialStyle={{opacity: 0, transform: 'translate(99%, 1%)'}}
+                    transition='opacity 1300ms ease-in-out, transform 1000ms ease-in-out'
+                    finalStyle={{opacity: 1, transform: 'translate(0%, 0%)'}}>
+                    {this.props.children}
+                </EasyTransition>
+
             </div>
-            </EasyTransition>
+            <Footer />
+            </div>
+
+
         );
     }
 }

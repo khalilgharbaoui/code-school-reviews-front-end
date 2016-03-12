@@ -3,7 +3,6 @@ import $ from 'jquery';
 import { Link } from 'react-router';
 import CodeschoolForm from './CodeschoolForm';
 
-require('../stylesheets/CodeschoolList.scss');
 
 class CodeschoolList extends React.Component {
 
@@ -68,7 +67,7 @@ class CodeschoolList extends React.Component {
 
             <p><Link to={`/codeschool/${codeschool.id}`}><img src={logoURL} /></Link></p>
             <h1><Link to={`/codeschool/${codeschool.id}`}>{codeschool.name}</Link></h1><br />
-            <div className="star"><span style={starStyle} className="rating"></span></div>
+              <div className="stared"><span style={starStyle} className="rated"></span></div>
             <p>{codeschool.description}</p>
             <p><a href={codeschool.url}>{codeschool.url}</a></p>
           </div>

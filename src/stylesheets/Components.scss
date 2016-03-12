@@ -1,0 +1,143 @@
+@import "./bootstrap";
+
+
+$react-rater-link: #ccc !default;
+$react-rater-hover: #ffdd99 !default;
+$react-rater-active: #fc6 !default;
+
+.react-rater {
+    display: inline-block;
+    line-height: normal;
+    font-size: 30px;
+    a {
+        cursor: pointer;
+        color: $react-rater-link;
+        &.will-be-active {
+            color: $react-rater-hover;
+        }
+        &.is-active {
+            color: $react-rater-active;
+        }
+        &.is-disabled {
+            color: $react-rater-link;
+            cursor: not-allowed;
+        }
+    }
+    &.is-disabled {
+      a {
+        cursor: default;
+      }
+    }
+}
+
+
+
+.stared {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  margin: 0 auto;
+
+  .rated {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display:block;
+  }
+
+}
+
+
+
+// .bubble
+// {
+// position: relative;
+// width: 435px;
+// height: 90px;
+// padding: 0px;
+// background: #FFFFFF;
+// -webkit-border-radius: 20px;
+// -moz-border-radius: 20px;
+// border-radius: 20px;
+// border: #7E7C7E solid 3px;
+// }
+//
+// .bubble:after
+// {
+// content: '';
+// position: absolute;
+// border-style: solid;
+// border-width: 22px 15px 0;
+// border-color: #FFFFFF transparent;
+// display: block;
+// width: 0;
+// z-index: 1;
+// margin-left: -15px;
+// bottom: -22px;
+// left: 75%;
+// }
+//
+// .bubble:before
+// {
+// content: '';
+// position: absolute;
+// border-style: solid;
+// border-width: 24px 17px 0;
+// border-color: #7E7C7E transparent;
+// display: block;
+// width: 0;
+// z-index: 0;
+// margin-left: -17px;
+// bottom: -27px;
+// left: 75%;
+// }
+
+
+
+
+.Footer {
+    padding: 24px;
+    padding: 1.5rem;
+
+    color: #999;
+    font-size: .85em;
+    text-align: center;
+
+bottom: 0;
+width: 100%;
+
+width: 100%;
+position: fixed;
+    bottom: 0px;
+
+    overflow: visible;
+    z-index: 99;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    background: white;
+    background-color: rgba(#404040, 0.85);
+    -webkit-box-shadow: 0px 3px 3px 0px #212121;
+    box-shadow: 0px 3px 3px 0px #212121;
+    height: 30px;
+}
+
+.logoimg{
+
+
+  font-size: 25px;
+  text-shadow:2px solid white;
+}
+
+.logoimg::after{
+  content: url(http://webtotally.com/beta.png);
+
+    margin-left:10px;
+}
+body{
+  padding-bottom: 95px !important;
+}

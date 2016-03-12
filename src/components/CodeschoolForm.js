@@ -1,6 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-require('../stylesheets/CodeschoolForm.scss');
 
 
 class CodeschoolForm extends React.Component {
@@ -91,7 +90,7 @@ class CodeschoolForm extends React.Component {
           placeholder='Code School description' />
         <br />
 
-        
+
         <input
           type='url'
           ref='codeschoolurl'

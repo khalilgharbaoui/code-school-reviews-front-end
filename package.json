@@ -61,6 +61,7 @@
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-easy-transition": "0.0.2",
+    "react-rater": "^0.3.0",
     "react-router": "^2.0.1"
   }
 }
