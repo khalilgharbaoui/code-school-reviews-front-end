@@ -1,10 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import Rater from 'react-rater'
-
-
-
-
+import Rater from 'react-rater';
 
 class ReviewForm extends React.Component {
   constructor(){
@@ -38,7 +34,7 @@ class ReviewForm extends React.Component {
       rating: this.state.rating
     }
 
-    let codeschoolId = compo.props.codeschoolId
+    let codeschoolId = compo.props.codeschoolId;
     $.ajax({
       type: 'POST',
       url: `https://codeschoolreviews.herokuapp.com/codeschools/${codeschoolId}/reviews`,
@@ -91,25 +87,6 @@ class ReviewForm extends React.Component {
         </div>
       </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     );
   }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import jQuery from 'jquery';
 import { Link } from 'react-router';
 class Navbar extends React.Component{
 

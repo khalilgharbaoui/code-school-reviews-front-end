@@ -24,11 +24,22 @@ module.exports = {
       }
     })
   ],
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['babel'],
-      include: path.join(__dirname, 'src')
-    }]
-  }
+
+    module: {
+      // webpack.config.dev.js
+
+    loaders: [
+      {
+        test: /\.jsx?/,
+        loaders: ['babel'],
+        include: path.join(__dirname, 'src')
+      },
+      { test: /\.woff2?$/,   loader: "url-loader?limit=10000&minetype=application/font-woff" },
+      { test: /\.ttf$/,    loader: "file-loader" },
+      { test: /\.eot$/,    loader: "file-loader" },
+      { test: /\.svg$/,    loader: "file-loader" },
+      { test: /\.png$/,    loader: "file-loader" },
+      { test: /\.scss$/,   loader: 'style!css!sass'}
+    ]
+    }
 };
