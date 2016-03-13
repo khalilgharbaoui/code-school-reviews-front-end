@@ -14,7 +14,12 @@ class Codeschool extends React.Component{
     super();
 
     this.state = {
-      databucket: []
+
+      logo:[],
+      name:[],
+      description:[],
+      url:[],
+      average_rating:[]
     }
   }
 
@@ -39,7 +44,12 @@ class Codeschool extends React.Component{
     })
     .done((response) => {
       compo.setState({
-        databucket: response
+
+        logo: response.codeschool.logo.url,
+        name: response.codeschool.name,
+        description: response.codeschool.description,
+        url: response.codeschool.url,
+        average_rating: response.average_rating
       });
     })
     .fail(function(data, jqXHR, textStatus){
@@ -60,16 +70,16 @@ class Codeschool extends React.Component{
 
   render(){
 
-    let logoURL = `https://codeschoolreviews.herokuapp.com${this.state.databucket.codeschool.logo.url}`;
+    let logoURL = `https://codeschoolreviews.herokuapp.com${this.state.logo}`;
     let starStyle = {
-      width: `${this.state.databucket.average_rating * 20.0}%`
+      width: `${this.state.average_rating * 20.0}%`
     };
     return(
       <div>
         <div className='jumbotron'>
           <img src={logoURL}/>
           <h1>
-            {this.state.databucket.codeschool.name}
+            {this.state.name}
           </h1>
           <span> <h4 className="gg">
               Average Rating:
@@ -81,10 +91,10 @@ class Codeschool extends React.Component{
         </span>
         <br />
           <p>
-            {this.state.databucket.codeschool.description}
+            {this.state.description}
           </p>
-          <a href={this.state.databucket.codeschool.url}>
-            {this.state.databucket.url}
+          <a href={this.state.url}>
+            {this.state.url}
           </a>
           <br />
         </div>
