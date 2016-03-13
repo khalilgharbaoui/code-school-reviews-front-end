@@ -63,8 +63,9 @@ class ReviewList extends React.Component {
           <div className='spacer col-xs-12 col-sm-6 col-md-4' key={review.id} id={review.id}>
             <div className='bubble'>
             <h2>{review.name}</h2>
-            <div className="stared"><span style={starStyle} className="rated"></span></div>
-            <p>{review.description}</p>
+            <span ><h4 className="gg">Rated this with:</h4><div className="stared"><span style={starStyle} className="rated"></span></div></span>
+            <br /><p>{review.description}</p>
+            <br />
             </div>
           </div>
         );

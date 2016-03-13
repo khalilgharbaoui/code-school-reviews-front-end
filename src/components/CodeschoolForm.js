@@ -75,6 +75,7 @@ class CodeschoolForm extends React.Component {
 
   render(){
     return(
+      <div className="spacer">
       <form onSubmit={this.sendCodeschool.bind(this)} >
           <div className="form-group">
         <input
@@ -111,6 +112,7 @@ class CodeschoolForm extends React.Component {
           Add Code School
         </button>
       </form>
+    </div>
     );
   }
 }
