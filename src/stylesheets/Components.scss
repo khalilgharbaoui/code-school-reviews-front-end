@@ -141,10 +141,13 @@ $react-rater-active: #feb729 !default;
 }
 body {
   padding-bottom: 95px !important;
+  color: #FFFFFF;
 }
 .listimage {
-  max-width: 100%;
-      width: 100%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 2px 2px rgba(23, 23, 23, 0.75);
 }
 .enter {
   opacity: 0.01;
@@ -168,14 +171,18 @@ body {
   transition: opacity 0.5s ease-in;
 }
 .blok {
-  padding: 20px;
-  border: 5px solid rgba(78, 93, 108, 0.5);
-  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.79);
-  margin-bottom: 30px;
-  min-height: 375px;
-  max-height: 375px;
-  width: 100%;
-  transition: ease-in-out 200ms 50ms;
+    padding: 20px;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.79);
+    margin-bottom: 30px;
+    min-height: 375px;
+    max-height: 375px;
+    width: 100%;
+    transition: cubic-bezier(0.6, -0.28, 0.74, 0.05) .2s 50ms;
+    background-color: rgb(79, 93, 109);
+    border: 5px solid rgba(255, 255, 255, 0.0);
+
+
+
 }
 .blok:hover {
   border: 5px solid rgba(78, 93, 108, 0.5);
@@ -198,7 +205,7 @@ body {
 }
 .strait {
   transition: ease-in-out 2s;
-  transform: translate(0%,0%) rotateY(0deg) skewY(0.5deg) scale(1);
+  transform: translate(0%,0%) rotateY(0deg) skewY(0deg) scale(1);
   transform-origin: 0;
 }
 
