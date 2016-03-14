@@ -81,15 +81,16 @@ class Codeschool extends React.Component{
           <h1>
             {this.state.name}
           </h1>
-          <span> <h4 className="gg">
+          <span>
+            <h4 className="gg">
               Average Rating:
             </h4>
-          <div className="stared">
-            <span style={starStyle} className="rated">
-            </span>
-          </div>
-        </span>
-        <br />
+            <div className="stared">
+              <span style={starStyle} className="rated">
+              </span>
+            </div>
+          </span>
+          <br />
           <p>
             {this.state.description}
           </p>

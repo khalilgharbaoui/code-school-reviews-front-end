@@ -14,15 +14,15 @@ class App extends React.Component {
         return (
             <div>
                 <Navbar />
+                <EasyTransition
+                    path={location.pathname}
+                    initialStyle={{opacity: 0.3, transform: 'translate(80%,0%) rotateY(0deg) skewY(0deg) scale(0.6)'}}
+                    transition='opacity linear 2300ms, transform ease-in-out 1800ms'
+                    finalStyle={{opacity: 1, transform: 'translate(0%,0%) rotateY(-1440deg) skewY(-0.5deg) scale(1)'}}>
                     <div className='container'>
-                        <EasyTransition
-                            path={location.pathname}
-                                initialStyle={{opacity: 0, transform: 'translate(50%, 100%) skewX(0deg)skewY(0deg)'}}
-                                transition='opacity 280ms linear, transform 420ms ease-in'
-                                finalStyle={{opacity: 1, transform: 'translate(0%, 0%) skewX(0deg)skewY(-180deg)'}}>
                         {this.props.children}
-                        </EasyTransition>
                     </div>
+                </EasyTransition>
                 <Footer />
             </div>
         );

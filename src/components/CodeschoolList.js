@@ -54,7 +54,7 @@ class CodeschoolList extends React.Component {
   render() {
     return (
       <div className='row gutter-10'>
-        <h1>
+        <h1 className='strait'>
           Welcome to Code School Reviews!
         </h1>
         {this.state.databucket.map(function(codeschool){
@@ -62,6 +62,7 @@ class CodeschoolList extends React.Component {
           let starStyle = {
             width: `${codeschool.average_rating * 20.0}%`
           };
+          let readMore = <Link to={`/codeschool/${codeschool.id}`}>read more</Link>
           return(
             <div
               className='col-xs-12 col-sm-6 col-md-4'
@@ -90,13 +91,13 @@ class CodeschoolList extends React.Component {
                 </span>
               <br />
                 <p>
-                  {codeschool.description}
+                  {codeschool.description.substr(0, 69) + `. . .`} {readMore}
                 </p>
-                <p>
+                {/*<p>
                   <a href={codeschool.url}>
                     {codeschool.url}
                   </a>
-                </p>
+                </p>*/}
               </div>
             </div>
           );

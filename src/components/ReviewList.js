@@ -30,7 +30,7 @@ class ReviewList extends React.Component {
 
     })
     .success((response) => {
-    //  console.log(response);
+      //  console.log(response);
     })
     .done((response) => {
       compo.setState({
@@ -40,10 +40,10 @@ class ReviewList extends React.Component {
     .fail(function(data, jqXHR, textStatus){
 
       compo.setState({
-          // display the error message from the server
+        // display the error message from the server
         errors: data.textStatus
-    });
-    console.log(jqXHR);
+      });
+      console.log(jqXHR);
     });
   }
 
@@ -52,26 +52,59 @@ class ReviewList extends React.Component {
   }
 
   render() {
-    return (<div className='row gutter-10'>
-      <h1>Code School Reviews</h1>
+    return (
+      <div className='row gutter-10'>
+        <h1>
+          Code School Reviews
+        </h1>
 
-      {this.state.databucket.map(function(review){
-        let starStyle = {
+        {this.state.databucket.map(function(review){
+          let starStyle = {
             width: `${review.rating * 20.0}%`
           };
-        return(
-          <div className='spacer col-xs-12 col-sm-6 col-md-4' key={review.id} id={review.id}>
-            <div className='bubble'>
-            <h2>{review.name}</h2>
-            <span ><h4 className="gg">Rated this with:</h4><div className="stared"><span style={starStyle} className="rated"></span></div></span>
-            <br /><p>{review.description}</p>
-            <br />
+          return(
+            <div
+              className='spacer col-xs-12 col-sm-6 col-md-4'
+              key={review.id}
+              id={review.id}>
+              <span className="bubble-emoji">
+              </span>
+              <div className='bubble'>
+                <h2>
+                  {review.name}
+                </h2>
+                <span >
+                  <h4 className="gg">
+                    Rated this with:
+                  </h4>
+                  <div className="stared">
+                    <span style={starStyle} className="rated">
+                    </span>
+                  </div>
+                </span>
+                <br />
+                <p>
+                  {review.description}
+                </p>
+                <br />
+              </div>
+
             </div>
+          );
+        })}
+        <div className='col-xs-12 col-sm-12 col-md-12'>
+          <div className='col-xs-12 col-sm-2 col-md-3'>
           </div>
-        );
-      })}
-      <div className='col-xs-12 col-sm-12 col-md-12'><div className='col-xs-12 col-sm-2 col-md-3'></div><div className='col-xs-12 col-sm-8 col-md-6'><ReviewForm codeschoolId={this.props.codeschoolId} onChange={this.getReviews.bind(this)}/></div><div className='col-xs-12 col-sm-2 col-md-3'></div></div>
-    </div>);
+          <div className='col-xs-12 col-sm-8 col-md-6'>
+            <ReviewForm
+              codeschoolId={this.props.codeschoolId}
+              onChange={this.getReviews.bind(this)}/>
+          </div>
+          <div className='col-xs-12 col-sm-2 col-md-3'>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
