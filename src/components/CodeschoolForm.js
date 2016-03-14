@@ -66,7 +66,7 @@ class CodeschoolForm extends React.Component {
 
     $.ajax({
       type: 'POST',
-      url: `http://codeschoolreviews.bitballoon.com/codeschools.json`,
+      url: `https://codeschoolreviews.herokuapp.com/codeschools.json`,
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({

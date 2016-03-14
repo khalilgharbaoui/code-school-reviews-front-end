@@ -18,7 +18,7 @@ class CodeschoolList extends React.Component {
 
 
     let compo = this;
-    let APIurl = 'http://codeschoolreviews.bitballoon.com';
+    let APIurl = 'https://codeschoolreviews.herokuapp.com';
 
     //http://api.jquery.com/jQuery.ajax/
 
@@ -58,7 +58,7 @@ class CodeschoolList extends React.Component {
           Welcome to Code School Reviews!
         </h1>
         {this.state.databucket.map(function(codeschool){
-          let logoURL = `http://codeschoolreviews.bitballoon.com${codeschool.logo.url}`
+          let logoURL = `https://codeschoolreviews.herokuapp.com${codeschool.logo.url}`
           let starStyle = {
             width: `${codeschool.average_rating * 20.0}%`
           };
@@ -71,7 +71,7 @@ class CodeschoolList extends React.Component {
               <div className='blok'>
                 <p>
                   <Link to={`/codeschool/${codeschool.id}`}>
-                    <img src={logoURL} />
+                    <img className="listimage" src={logoURL} />
                   </Link>
                 </p>
                 <h2>
