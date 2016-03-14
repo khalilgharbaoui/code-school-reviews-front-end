@@ -28,7 +28,7 @@ class Codeschool extends React.Component{
 
     let compo = this;
     let codeschoolId = this.props.params.codeschoolId;
-    let APIurl = `https://codeschoolreviews.herokuapp.com/codeschools/${codeschoolId}`;
+    let APIurl = `http://codeschoolreviews.bitballoon.com/codeschools/${codeschoolId}`;
 
     //http://api.jquery.com/jQuery.ajax/
     $.ajax({
@@ -70,7 +70,7 @@ class Codeschool extends React.Component{
 
   render(){
 
-    let logoURL = `https://codeschoolreviews.herokuapp.com${this.state.logo}`;
+    let logoURL = `http://codeschoolreviews.bitballoon.com${this.state.logo}`;
     let starStyle = {
       width: `${this.state.average_rating * 20.0}%`
     };

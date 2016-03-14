@@ -22,7 +22,7 @@ class ReviewForm extends React.Component {
   sendReview(event){
     event.preventDefault();
     let compo = this;
-    
+
     let formData = {
       name: compo.refs.reviewername.value,
       description: compo.refs.reviewdescription.value,
@@ -32,7 +32,7 @@ class ReviewForm extends React.Component {
     let codeschoolId = compo.props.codeschoolId;
     $.ajax({
       type: 'POST',
-      url: `https://codeschoolreviews.herokuapp.com/codeschools/${codeschoolId}/reviews`,
+      url: `http://codeschoolreviews.bitballoon.com/codeschools/${codeschoolId}/reviews`,
       contentType: 'application/json',
       dataType: 'json',
       data: JSON.stringify({

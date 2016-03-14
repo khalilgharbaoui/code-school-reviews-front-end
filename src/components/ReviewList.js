@@ -18,7 +18,7 @@ class ReviewList extends React.Component {
 
     let compo = this;
     let codeschoolId = compo.props.codeschoolId
-    let APIurl = `https://codeschoolreviews.herokuapp.com/codeschools/${codeschoolId}/reviews`;
+    let APIurl = `http://codeschoolreviews.bitballoon.com/codeschools/${codeschoolId}/reviews`;
 
     //http://api.jquery.com/jQuery.ajax/
 
