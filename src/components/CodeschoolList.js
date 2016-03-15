@@ -68,7 +68,7 @@ class CodeschoolList extends React.Component {
               className='col-xs-12 col-sm-6 col-md-4'
               key={codeschool.id}
               id={codeschool.id}>
-              <div className='blok'>
+              <div className='blok well'>
                 <p>
                   <Link to={`/codeschool/${codeschool.id}`}>
                     <img className="listimage" src={logoURL} />

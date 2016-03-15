@@ -92,7 +92,7 @@ class ReviewList extends React.Component {
             </div>
           );
         })}
-        <div className='col-xs-12 col-sm-12 col-md-12'>
+        <div className='col-xs-12 col-sm-12 col-md-12 spacetop'>
           <div className='col-xs-12 col-sm-2 col-md-3'>
           </div>
           <div className='col-xs-12 col-sm-8 col-md-6'>
