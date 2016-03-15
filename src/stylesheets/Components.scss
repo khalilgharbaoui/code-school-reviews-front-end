@@ -132,12 +132,12 @@ $react-rater-active: #feb729 !default;
   height: 30px;
 }
 .logoimg {
-  font-size: 25px;
+  font-size: 24px;
   text-shadow: 2px solid white;
 }
 .logoimg::after {
   content: url("http://webtotally.com/beta.png");
-  margin-left: 5px;
+  margin-left: 2px;
 }
 body {
   padding-bottom: 95px !important;
