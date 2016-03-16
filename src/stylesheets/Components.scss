@@ -175,7 +175,7 @@ body {
 }
 .blok {
     padding: 25px;
-
+    margin-bottom: 30px;
     box-shadow: 0 1px 2px 1px rgba(0,0,0,.79);
     min-height: 375px;
     max-height: 375px;
@@ -219,11 +219,7 @@ body {
 
 }
 
-.col-xs-12, .col-sm-6, .col-md-4{
-  margin-top: 6px !important;
-  margin-bottom: 6px !important;
 
-}
 .gutter-10.row {
   margin-right: -5px;
   margin-left: -5px;
