@@ -8,7 +8,8 @@
 
 I've build this code school review application on my own as a [homework assignment] (https://slack-files.com/files-pri-safe/T0K533E5A-F0P70KPEE/iii-restaurant-reviews.pdf?c=1458956834-0188c61452d9840db3f6de2088dce72ebe748272) during my developer traineeship at Codaisseur.
 
-The test driven (TDD), RESTful API Back-end is made in Ruby on Rails serving a JSON format. It utilizes Puma for HTTP Concurrency and CORS middleware, that allows it to have cross domain AJAX calls with the ReactJS Front-end client, the HTTP requests are preformed asynchronously trough jQuery AJAX. Checkout the live demo's here: [Front-end demo](http://codeschoolreviews.bitballoon.com) | [Back-end demo](http://codeschoolreviews.herokuapp.com)
+The test driven (TDD), RESTful API Back-end is made in Ruby on Rails serving a JSON format. It utilizes Puma for HTTP Concurrency and CORS middleware, that allows it to have cross domain AJAX calls with the ReactJS Front-end client, the HTTP requests are preformed asynchronously trough jQuery AJAX. Checkout the live demo's here: 
+[Front-end demo](http://codeschoolreviews.bitballoon.com) | [Back-end demo](http://codeschoolreviews.herokuapp.com)
 
 ####Resources used:
 
