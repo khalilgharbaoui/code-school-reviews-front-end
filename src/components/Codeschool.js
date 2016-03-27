@@ -70,7 +70,9 @@ class Codeschool extends React.Component{
 
   render(){
 
-    let logoURL = `https://codeschoolreviews.herokuapp.com${this.state.logo}`;
+    // let logoURL = `https://codeschoolreviews.herokuapp.com${this.state.logo}`;
+    let logoURL = `${this.state.logo}`;
+
     let starStyle = {
       width: `${this.state.average_rating * 20.0}%`
     };

@@ -58,7 +58,8 @@ class CodeschoolList extends React.Component {
           Welcome to Code School Reviews!
         </h1>
         {this.state.databucket.map(function(codeschool){
-          let logoURL = `https://codeschoolreviews.herokuapp.com${codeschool.logo.url}`
+          // let logoURL = `https://codeschoolreviews.herokuapp.com${codeschool.logo.url}`
+          let logoURL = `${codeschool.logo.url}`
           let starStyle = {
             width: `${codeschool.average_rating * 20.0}%`
           };
