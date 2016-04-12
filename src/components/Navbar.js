@@ -2,10 +2,24 @@ import React from 'react';
 import { Link } from 'react-router';
 class Navbar extends React.Component{
 
+  static propTypes = {
+        brand: React.PropTypes.string.isRequired
+        // price: React.PropTypes.number.isRequired,
+        // initialQty: React.PropTypes.number
+    };
+    static defaultProps = {
+        brand: 'Code School Reviews!'
+        // price: 100,
+        // initialQty: 0
+    };
+
   constructor(){
     super();
 
   }
+
+}
+
 
   render(){
           return (
@@ -18,7 +32,7 @@ class Navbar extends React.Component{
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <Link to={"/"} className="navbar-brand"><span className="logo"><strong className='logoimg'>Code School Reviews</strong></span></Link>
+                  <Link to={"/"} className="navbar-brand"><span className="logo"><strong className='logoimg'>{this.props.brand}</strong></span></Link>
                 </div>
 
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -32,5 +46,5 @@ class Navbar extends React.Component{
         );
      }
 }
-
+Control.defaultProps = {value: ''};
 export default Navbar;
