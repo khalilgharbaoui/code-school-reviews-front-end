@@ -2,24 +2,10 @@ import React from 'react';
 import { Link } from 'react-router';
 class Navbar extends React.Component{
 
-  static propTypes = {
-        brand: React.PropTypes.string.isRequired
-        // price: React.PropTypes.number.isRequired,
-        // initialQty: React.PropTypes.number
-    };
-    static defaultProps = {
-        brand: 'Code School Reviews!'
-        // price: 100,
-        // initialQty: 0
-    };
-
   constructor(){
     super();
 
   }
-
-}
-
 
   render(){
           return (
@@ -46,5 +32,8 @@ class Navbar extends React.Component{
         );
      }
 }
-Control.defaultProps = {value: ''};
+//adding default and defaultPropsTypes to this Component
+Navbar.propTypes = { brand: React.PropTypes.string.isRequired }
+Navbar.defaultProps = { brand: 'Code School Reviews!' }
+
 export default Navbar;
